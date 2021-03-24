@@ -497,7 +497,12 @@ footer {
 /*---------------------------------------------------------------    Removing things for mobile --------------------------------------------------------------------*/
 
 .main-box-m,
-.header-buttons-m {
+.header-buttons-m,
+.first-container-m,
+.third-container-m,
+.second-container-m,
+.second-m,
+.footer-container-m {
   display: none;
 }
 
@@ -668,7 +673,11 @@ footer {
   .nav-links,
   .nav-buttons,
   .main,
-  .main-box {
+  .main-box,
+  .first-container,
+  .third-container,
+  .second,
+  .footer-container {
     display: none;
   }
 
@@ -734,6 +743,191 @@ footer {
   }
   .burger {
     display: block;
+  }
+
+  /*-------------------------------------------------- FIRST SECTION Mobile------------------------------------------------*/
+
+  .first {
+    margin-top: 15%;
+    margin-bottom: 60%;
+  }
+
+  .first-headline {
+    font-size: 1.75rem;
+  }
+
+  .first-container-m {
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10%;
+  }
+
+  .first-container-image-m img {
+    margin-bottom: 10%;
+  }
+
+  .first-container-text-m h1 {
+    color: #1f405e;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 1.75rem;
+    margin-bottom: 7.5%;
+  }
+
+  .Introducing-m p {
+    margin-bottom: 10%;
+  }
+
+  .first-container-text-m p {
+    display: inline-flex;
+    font-family: "Overpass", sans-serif;
+    font-weight: 200;
+    color: #717276;
+    line-height: 1.75;
+    font-size: 1rem;
+  }
+
+  /*-------------------------------------------------- SECOND SECTION Mobile------------------------------------------------*/
+
+  .second-m {
+    display: block;
+    background: linear-gradient(
+      to right,
+      hsl(237, 17%, 21%),
+      hsl(237, 23%, 32%)
+    );
+    border-top-right-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+    padding-bottom: 35%;
+  }
+  .second-container-m {
+    display: block;
+    background: url(./images/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: 125%;
+    background-position: top -9.25rem center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .second-image-container-m img {
+    margin-top: -50%;
+    width: 100%;
+  }
+
+  .second-text-container-m {
+    color: white;
+    margin: 0 5%;
+    text-align: center;
+  }
+
+  .second-text-container-m h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 2.4rem;
+  }
+
+  .second-text-container-m p {
+    font-family: "Overpass", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.75;
+    letter-spacing: 1px;
+  }
+
+  .second-text-container-m p:nth-child(2) {
+    margin-top: 5%;
+  }
+
+  /*-------------------------------------------------- THIRD SECTION Mobile------------------------------------------------*/
+
+  .third-container-m {
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .third-image-container-m {
+    margin-bottom: 5%;
+  }
+
+  .third-text-container-m h1 {
+    color: #1f405e;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 1.75rem;
+    margin-bottom: 7.5%;
+  }
+
+  .free-m p {
+    margin-bottom: 10%;
+  }
+
+  .third-text-container-m p {
+    display: inline-flex;
+    font-family: "Overpass", sans-serif;
+    font-weight: 200;
+    color: #717276;
+    line-height: 1.75;
+    font-size: 1rem;
+  }
+
+  .footer-container-m {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-logo-m {
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
+
+  .footer-heading-m {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-heading-m h2 {
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 40%;
+  }
+
+  .footer-heading-m a {
+    display: inline;
+    color: white;
+    text-decoration: none;
+    font-family: "Overpass", sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    margin-bottom: 10%;
+  }
+
+  .footer-1-m,
+  .footer-2-m,
+  .footer-3-m {
+    margin-bottom: 15%;
+  }
+
+  .footer-heading-m a:hover {
+    border-bottom: 2px solid white;
   }
 }
 
