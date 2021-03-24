@@ -1,0 +1,770 @@
+:root {
+  --lightRed: var(hsl(356, 100%, 66%));
+  --veryLightRed: var(hsl(355, 100%, 74%));
+  --veryDarkBlue: var(hsl(208, 49%, 24%));
+  --grayishBlue: var(hsl(240, 2%, 79%)); /*footer text*/
+
+  --gradientBlue: linear-gradient(
+    right,
+    hsl(237, 17%, 21%),
+    hsl(237, 23%, 32%)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Overpass", sans-serif;
+  background: #fafafa;
+}
+/*-------------------------------------------------------------------------- HEADER --------------------------------------------------------------------*/
+header {
+  background: linear-gradient(
+    to right,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+
+  border-bottom-left-radius: 10.9375rem;
+}
+
+.everything {
+  overflow-x: hidden;
+}
+.header-container {
+  height: 100vh;
+  width: 100%;
+  background-image: url(./images/bg-pattern-intro.svg);
+  background-size: 200%;
+  background-position: left 27.5% center;
+  background-repeat: no-repeat;
+}
+/*-------------------------------------------------------------------------- NAVIGATION BAR -------------------------------------------------------------*/
+nav {
+  margin: 0 15%;
+  padding-top: 2.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-left img {
+  display: block;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin-left: 2rem;
+  margin-right: auto;
+}
+.nav-links > li {
+  position: relative;
+  display: inline-block;
+  margin: 0 1.5rem;
+}
+
+.nav-links > li {
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links > li:hover {
+  color: white;
+}
+
+.nav-links > li::before {
+  content: "";
+  position: absolute;
+  width: 82.5%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-links > li:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.nav-links > li img {
+  display: inline;
+  transition: all 0.25s ease-in-out;
+}
+
+.nav-links > li ul {
+  position: absolute;
+  list-style-type: none;
+  background-color: white;
+  top: 3rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.nav-links > li ul li {
+  margin-bottom: 15%;
+}
+
+.nav-links > li ul li a {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+}
+
+.nav-links > li ul li a:hover {
+  font-weight: 600;
+}
+
+.prodImg.open {
+  transform: rotate(180deg);
+}
+
+.comImg.open {
+  transform: rotate(180deg);
+}
+
+.conImg.open {
+  transform: rotate(180deg);
+}
+
+.first-dropdown {
+  display: none;
+  position: absolute;
+  padding-right: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  left: -30%;
+}
+
+.first-dropdown.open {
+  display: block;
+}
+
+.second-dropdown {
+  display: none;
+  position: absolute;
+  padding-right: 5rem;
+  padding-top: 2rem;
+  padding-left: 0.25rem;
+  padding-bottom: 1rem;
+  left: -20%;
+}
+
+.second-dropdown.open {
+  display: block;
+}
+
+.third-dropdown {
+  display: none;
+  position: absolute;
+  padding-right: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  left: -25%;
+}
+
+.third-dropdown.open {
+  display: block;
+}
+.nav-links > li ul li a {
+  color: black;
+  margin-left: 10%;
+  padding-left: 10%;
+}
+
+.nav-links > li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+}
+
+.nav-buttons {
+  justify-content: flex-end;
+}
+
+.nav-buttons a {
+  display: inline;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.signUp {
+  display: inline;
+  margin-left: 2rem;
+  padding: 10px 20px;
+  letter-spacing: 0.05rem;
+  background: hsl(355, 100%, 74%);
+  border-radius: 25px;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+
+.signUp:hover {
+  padding: 12.5px 22.5px;
+}
+
+.burger {
+  display: none;
+}
+/*----------------------------------------------------------------------      MAIN HEADER BOX     ---------------------------------------------------------*/
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+}
+
+.main-box {
+  text-align: center;
+  margin-top: 15%;
+}
+
+.main-box h1 {
+  font-size: 4.5rem;
+  color: white;
+}
+
+.main-box h6 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 200;
+  font-size: 1.5rem;
+  margin-top: 1%;
+  color: white;
+}
+
+.header-buttons {
+  margin-top: 3.5%;
+}
+.header-buttons a {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  letter-spacing: 0.05rem;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 450;
+  padding: 12.5px 20px;
+  background: hsl(355, 100%, 74%);
+  border-radius: 25px;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+.header-buttons a:nth-child(1) {
+  margin-right: 0.25%;
+}
+.header-buttons a:nth-child(2) {
+  margin-left: 0.25%;
+}
+
+.header-buttons a:hover {
+  color: hsl(355, 100%, 74%);
+  background: white;
+}
+
+/*-------------------------------------------------------------------      FIRST SECTION       -------------------------------------------------------*/
+
+.first {
+  margin-top: 10%;
+}
+
+.first-headline {
+  text-align: center;
+  margin-bottom: 5%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  color: #1f405e;
+}
+
+.first-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15%;
+}
+
+.first-container-text {
+  display: flex;
+  flex-direction: column;
+  width: 57.5%;
+  margin-left: 15%;
+}
+
+.first-container h1 {
+  color: #1f405e;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 1.75rem;
+  margin-bottom: 7.5%;
+}
+
+.Introducing p {
+  margin-bottom: 10%;
+}
+
+.first-container p {
+  display: inline-flex;
+  font-family: "Overpass", sans-serif;
+  font-weight: 200;
+  color: #717276;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+.first-container-image {
+  position: relative;
+  width: 100%;
+}
+.first-container-image img {
+  position: absolute;
+  width: 100%;
+  top: -50%;
+  right: -27%;
+}
+
+/*----------------------------------------------------------------------    SECOND SECTION      ---------------------------------------------------*/
+
+.second {
+  background: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  border-top-right-radius: 6rem;
+  border-bottom-left-radius: 6rem;
+}
+.second-container {
+  background: url(./images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: left 85%;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-image-container {
+  margin-left: auto;
+}
+
+.second-text-container {
+  color: white;
+  width: 35%;
+  margin-left: 5%;
+  margin-right: auto;
+}
+
+.second-text-container h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.second-text-container p {
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.second-text-container p:nth-child(2) {
+  margin-top: 5%;
+}
+
+/*---------------------------------------------------------------------    THIRD SECTION     -------------------------------------------------------------*/
+
+.third {
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.third-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.third-text-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-right: 15%;
+}
+
+.third-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.third-image-container img {
+  position: absolute;
+  width: 115%;
+  top: -47.5%;
+  left: -32%;
+}
+
+.third-text-container h1 {
+  color: #1f405e;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 1.75rem;
+  margin-bottom: 7.5%;
+}
+
+.free p {
+  margin-bottom: 10%;
+}
+
+.third-text-container p {
+  display: inline-flex;
+  font-family: "Overpass", sans-serif;
+  font-weight: 200;
+  color: #717276;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+/*-------------------------------------------------------------------------- FOOTER -------------------------------------------------------------*/
+footer {
+  height: 100%;
+  background-color: #24242c;
+  padding-bottom: 2.5%;
+
+  border-top-right-radius: 8rem;
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  margin-top: 5%;
+}
+
+.footer-heading {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  color: white;
+}
+
+.footer-heading h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 40%;
+}
+
+.footer-heading a {
+  display: inline;
+  color: white;
+  text-decoration: none;
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin-bottom: 10%;
+}
+
+.footer-heading a:hover {
+  border-bottom: 2px solid white;
+}
+
+/*---------------------------------------------------------------    Removing things for mobile --------------------------------------------------------------------*/
+
+.main-box-m,
+.header-buttons-m {
+  display: none;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      MEDIA QUERIES       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/*--------------------------------------------------------------------       MIN- 1700 PX        --------------------------------------------------------------------------------------*/
+
+@media (min-width: 1700px) {
+  .first-container-image img {
+    top: -60%;
+    right: -30%;
+    width: 110%;
+  }
+}
+
+/*--------------------------------------------------------------------       MAX-1700 PX        --------------------------------------------------------------------------------------*/
+
+@media (max-width: 1700px) {
+  .first-container-image img {
+    top: -35%;
+  }
+}
+
+/*--------------------------------------------------------------------       1400 PX        --------------------------------------------------------------------------------------*/
+@media (max-width: 1400px) {
+  .first-container-image img {
+    top: -10%;
+  }
+
+  .third-image-container img {
+    top: -10%;
+  }
+}
+
+/*--------------------------------------------------------------------       1100 PX        --------------------------------------------------------------------------------------*/
+
+@media (max-width: 1100px) {
+  .nav-links li {
+    font-size: 1rem;
+  }
+
+  .header-buttons {
+    font-size: 1rem;
+  }
+
+  /*-------------------------------------------------- First SECTION ------------------------------------------------*/
+  .first-container-text {
+    width: 70%;
+  }
+
+  .first-container h1 {
+    font-size: 1.65rem;
+  }
+
+  .first-container p {
+    font-size: 0.9rem;
+  }
+
+  /*-------------------------------------------------- THIRD SECTION ------------------------------------------------*/
+
+  .third-text-container {
+    width: 70%;
+  }
+
+  .third-container h1 {
+    font-size: 1.65rem;
+  }
+
+  .third-container p {
+    font-size: 0.9rem;
+  }
+}
+
+/*--------------------------------------------------------------------       1000 PX        --------------------------------------------------------------------------------------*/
+
+@media (max-width: 1030px) {
+  .nav-links,
+  .nav-buttons {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+  /*------------------------------------------------- FIRST SECTION ------------------------------------------------*/
+  .first-container-image img {
+    top: 5%;
+    width: 100%;
+  }
+
+  .first-container-text {
+    width: 80%;
+  }
+
+  .first-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .first-container p {
+    font-size: 0.8rem;
+  }
+
+  /*------------------------------------------------- THIRD SECTION ----------------------------------------------*/
+  .third-image-container img {
+    top: -20%;
+    left: -33%;
+    width: 125%;
+  }
+
+  .third-text-container {
+    width: 80%;
+  }
+
+  .third-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .third-container p {
+    font-size: 0.8rem;
+  }
+}
+
+/*--------------------------------------------------------------------       930 PX        --------------------------------------------------------------------------------------*/
+
+@media (max-width: 975px) {
+  .main-box h1 {
+    font-size: 3.5rem;
+  }
+  .main-box h6 {
+    font-size: 1rem;
+  }
+  /*------------------------------------------------- FIRST SECTION ------------------------------------------------*/
+  .first-container-text {
+    width: 85%;
+  }
+
+  .first-container h1 {
+    font-size: 1.4rem;
+  }
+
+  .first-container p {
+    font-size: 0.7rem;
+  }
+
+  /*-------------------------------------------------- THIRD SECTION ------------------------------------------------*/
+  .third-image-container img {
+    top: -10%;
+    left: -38.5%;
+    width: 140%;
+  }
+
+  .third-text-container {
+    width: 85%;
+  }
+
+  .third-container h1 {
+    font-size: 1.4rem;
+  }
+
+  .third-container p {
+    font-size: 0.7rem;
+  }
+}
+
+/*--------------------------------------------------------------------       700 PX        --------------------------------------------------------------------------------------*/
+
+@media (max-width: 700px) {
+  .nav-links,
+  .nav-buttons,
+  .main,
+  .main-box {
+    display: none;
+  }
+
+  header {
+    border-bottom-left-radius: 7rem;
+  }
+  .header-container {
+    height: 70vh;
+  }
+
+  .main-box-m {
+    display: block;
+    text-align: center;
+    margin: 0 5%;
+    margin-top: 25%;
+  }
+
+  .main-box-m h1 {
+    font-size: 3rem;
+    color: white;
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+  }
+
+  .main-box-m h1:nth-child(2) {
+    margin-bottom: 2.5%;
+  }
+
+  .main-box-m h2 {
+    font-size: 1.5rem;
+    font-family: "Overpass", sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+
+  .header-buttons-m {
+    display: block;
+    margin-top: 7.5%;
+    text-align: center;
+  }
+  .header-buttons-m a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.05rem;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 450;
+    padding: 15px 20px;
+    background: hsl(355, 100%, 74%);
+    border-radius: 25px;
+    transition: all 300ms ease-in-out;
+  }
+  .header-buttons-m a:nth-child(1) {
+    margin-right: 1%;
+  }
+  .header-buttons-m a:nth-child(2) {
+    margin-left: 1%;
+  }
+
+  .header-buttons-m a:hover {
+    color: hsl(355, 100%, 74%);
+    background: white;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+@media (max-width: 481px) {
+  .main-box-m {
+    margin-top: 30%;
+  }
+
+  .main-box-m h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-box-m h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-box-m {
+    margin-top: 32.5%;
+  }
+
+  .main-box-m h1 {
+    font-size: 2.25rem;
+  }
+
+  .main-box-m h2 {
+    font-size: 0.75rem;
+  }
+
+  .header-buttons-m a {
+    font-size: 1.1rem;
+  }
+}
