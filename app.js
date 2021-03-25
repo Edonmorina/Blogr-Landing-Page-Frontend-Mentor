@@ -134,3 +134,67 @@ window.addEventListener("mouseup" , (event)=>{
     
 })
 
+
+
+
+const firstMenuBtn = document.querySelector('.firstDown-h1')
+const secondMenuBtn = document.querySelector('.secondDown-h1')
+const thirdMenuBtn = document.querySelector('.thirdDown-h1')
+const burger = document.querySelector('.burger');
+const burgerMenu = document.querySelector('.burger-container');
+const firstDown = document.querySelector('.firstDown');
+const secondDown = document.querySelector('.secondDown');
+const thirdDown = document.querySelector('.thirdDown');
+
+let burgerMenuCheck = false;
+
+let firstDownCheck = false;
+let secondDownCheck = false;
+let thirdDownCheck = false;
+
+
+burger.addEventListener("click" , () =>{
+
+        if(!burgerMenuCheck){
+            burgerMenu.classList.add('open');
+            burgerMenuCheck = true;
+        }else{
+            burgerMenu.classList.remove('open');
+            burgerMenuCheck = false;
+        }
+})
+
+firstMenuBtn.addEventListener("click" , () =>{
+
+        if(!firstDownCheck){
+            firstDown.classList.add('open')
+            firstDownCheck = true;
+        }else{
+            firstDown.classList.remove('open');
+            firstDownCheck = false;
+        }
+})
+
+secondMenuBtn.addEventListener("click" , () =>{
+
+    if(!secondDownCheck){
+        secondDown.classList.add('open')
+        secondDownCheck = true;
+    }else{
+        secondDown.classList.remove('open');
+        secondDownCheck = false;
+    }
+})
+
+thirdMenuBtn.addEventListener("click" , () =>{
+
+    if(!thirdDownCheck){
+        thirdDown.classList.add('open')
+        thirdDownCheck = true;
+    }else{
+        thirdDown.classList.remove('open');
+        thirdDownCheck = false;
+    }
+})
+
+

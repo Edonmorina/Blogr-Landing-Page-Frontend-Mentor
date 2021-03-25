@@ -502,7 +502,9 @@ footer {
 .third-container-m,
 .second-container-m,
 .second-m,
-.footer-container-m {
+.footer-container-m,
+.burger-container,
+.burger-nav {
   display: none;
 }
 
@@ -587,6 +589,11 @@ footer {
   .burger {
     display: block;
   }
+
+  .burger-container {
+    position: relative;
+    display: block;
+  }
   /*------------------------------------------------- FIRST SECTION ------------------------------------------------*/
   .first-container-image img {
     top: 5%;
@@ -622,6 +629,115 @@ footer {
 
   .third-container p {
     font-size: 0.8rem;
+  }
+
+  .nav-left,
+  .burger {
+    margin-top: 10%;
+  }
+
+  /*-------------------------------------------------- BURGER MENU DROPDOWN  1000 PX------------------------------------------------*/
+
+  .burger-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    top: 12rem;
+    margin: 0 5%;
+    width: 70%;
+    padding-top: 7.5%;
+    padding-bottom: 5%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .burger-nav h1 {
+    color: #1f405e;
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 7.5%;
+  }
+
+  .burger-nav ul {
+    background-color: #efeff1;
+    width: 80%;
+    padding: 7.5% 0;
+    list-style-type: none;
+    border-radius: 7.5px;
+    margin-bottom: 2.5%;
+  }
+
+  .burger-nav ul li {
+    margin-bottom: 10%;
+  }
+
+  .burger-nav ul li a {
+    color: #556879;
+    text-decoration: none;
+    font-family: "Overpass", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .burger-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 10%;
+    border-top: 1.5px solid #e7e7e7;
+    width: 80%;
+  }
+
+  .burger-buttons a {
+    text-decoration: none;
+    font-family: "Overpass", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .burger-login {
+    margin-top: 10%;
+    color: #1f405e;
+  }
+
+  .burger-signUp {
+    margin-top: 10%;
+    color: white;
+    background: linear-gradient(
+      to right,
+      hsl(13, 100%, 72%),
+      hsl(353, 100%, 62%)
+    );
+    padding: 10px 30px;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  .firstDown,
+  .secondDown,
+  .thirdDown,
+  .burger-container {
+    display: none;
+  }
+
+  .burger-container.open,
+  .firstDown.open,
+  .secondDown.open,
+  .thirdDown.open {
+    display: block;
+  }
+
+  .burger,
+  .firstDown-h1,
+  .secondDown-h1,
+  .thirdDown-h1 {
+    cursor: pointer;
   }
 }
 
@@ -691,8 +807,8 @@ footer {
   .main-box-m {
     display: block;
     text-align: center;
-    margin: 0 5%;
-    margin-top: 25%;
+    margin-top: 5%;
+    margin-bottom: 15%;
   }
 
   .main-box-m h1 {
@@ -928,6 +1044,115 @@ footer {
 
   .footer-heading-m a:hover {
     border-bottom: 2px solid white;
+  }
+
+  .nav-left,
+  .burger {
+    margin-top: 10%;
+  }
+
+  /*-------------------------------------------------- BURGER MENU DROPDOWN------------------------------------------------*/
+
+  .burger-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    top: 7rem;
+    margin: 0 5%;
+    width: 90%;
+    padding-top: 7.5%;
+    padding-bottom: 5%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .burger-nav h1 {
+    color: #1f405e;
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 7.5%;
+  }
+
+  .burger-nav ul {
+    background-color: #efeff1;
+    width: 80%;
+    padding: 7.5% 0;
+    list-style-type: none;
+    border-radius: 7.5px;
+    margin-bottom: 2.5%;
+  }
+
+  .burger-nav ul li {
+    margin-bottom: 10%;
+  }
+
+  .burger-nav ul li a {
+    color: #556879;
+    text-decoration: none;
+    font-family: "Overpass", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .burger-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 10%;
+    border-top: 1.5px solid #e7e7e7;
+    width: 80%;
+  }
+
+  .burger-buttons a {
+    text-decoration: none;
+    font-family: "Overpass", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .burger-login {
+    margin-top: 10%;
+    color: #1f405e;
+  }
+
+  .burger-signUp {
+    margin-top: 10%;
+    color: white;
+    background: linear-gradient(
+      to right,
+      hsl(13, 100%, 72%),
+      hsl(353, 100%, 62%)
+    );
+    padding: 10px 30px;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  .firstDown,
+  .secondDown,
+  .thirdDown,
+  .burger-container {
+    display: none;
+  }
+
+  .burger-container.open,
+  .firstDown.open,
+  .secondDown.open,
+  .thirdDown.open {
+    display: block;
+  }
+
+  .burger,
+  .firstDown-h1,
+  .secondDown-h1,
+  .thirdDown-h1 {
+    cursor: pointer;
   }
 }
 
