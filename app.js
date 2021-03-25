@@ -136,15 +136,21 @@ window.addEventListener("mouseup" , (event)=>{
 
 
 
+const burger = document.querySelector('.menu-btn');
+
+const burgerMenu = document.querySelector('.burger-container');
 
 const firstMenuBtn = document.querySelector('.firstDown-h1')
 const secondMenuBtn = document.querySelector('.secondDown-h1')
 const thirdMenuBtn = document.querySelector('.thirdDown-h1')
-const burger = document.querySelector('.burger');
-const burgerMenu = document.querySelector('.burger-container');
+
 const firstDown = document.querySelector('.firstDown');
 const secondDown = document.querySelector('.secondDown');
 const thirdDown = document.querySelector('.thirdDown');
+
+const firstDownArrow = document.querySelector('.firstDown-img')
+const secondDownArrow = document.querySelector('.secondDown-img')
+const thirdDownArrow = document.querySelector('.thirdDown-img')
 
 let burgerMenuCheck = false;
 
@@ -156,9 +162,11 @@ let thirdDownCheck = false;
 burger.addEventListener("click" , () =>{
 
         if(!burgerMenuCheck){
+            burger.classList.add('open')
             burgerMenu.classList.add('open');
             burgerMenuCheck = true;
         }else{
+            burger.classList.remove('open')
             burgerMenu.classList.remove('open');
             burgerMenuCheck = false;
         }
@@ -168,9 +176,11 @@ firstMenuBtn.addEventListener("click" , () =>{
 
         if(!firstDownCheck){
             firstDown.classList.add('open')
+            firstDownArrow.classList.add('open')
             firstDownCheck = true;
         }else{
             firstDown.classList.remove('open');
+            firstDownArrow.classList.remove('open')
             firstDownCheck = false;
         }
 })
@@ -179,9 +189,11 @@ secondMenuBtn.addEventListener("click" , () =>{
 
     if(!secondDownCheck){
         secondDown.classList.add('open')
+        secondDownArrow.classList.add('open')
         secondDownCheck = true;
     }else{
         secondDown.classList.remove('open');
+        secondDownArrow.classList.remove('open')
         secondDownCheck = false;
     }
 })
@@ -190,9 +202,11 @@ thirdMenuBtn.addEventListener("click" , () =>{
 
     if(!thirdDownCheck){
         thirdDown.classList.add('open')
+        thirdDownArrow.classList.add('open')
         thirdDownCheck = true;
     }else{
         thirdDown.classList.remove('open');
+        thirdDownArrow.classList.remove('open')
         thirdDownCheck = false;
     }
 })
